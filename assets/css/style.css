@@ -1,5 +1,19 @@
+/* Below is a list of variables I use through out */
 :root {
-    
+    --font: futura-pt, sans-serif;
+    --heavy: 700;
+    --book: 400;
+    --heading: 45px;
+    --para: 18px;
+    --paraLine: 1.4em;
+    --dark: #1A1A1D;
+    --red: #950740;
+}
+
+/* Sets the basic properties for the body */
+body {
+    background-color: var(--dark);
+    color: rgb(250, 250, 250);
 }
 
 /* Sets the basic attributes for the main header */
@@ -8,4 +22,55 @@
     margin: auto;
     text-align: center;
     margin-top: 30px;
+    font-family: var(--font);
+}
+
+/* Styling of the title */
+.title-head h1 {
+    font-size: var(--heading);
+}
+
+/* Styling of th sub-title */
+.title-head p {
+    margin-top: 20px;
+    font-size: var(--para);
+    line-height: var(--paraLine);
+}
+
+/* Setting out the grid display for desktop */
+.grid {
+    display: grid;
+    grid-template: 1.5fr 2fr / repeat(3, 1fr);
+    row-gap: 50px;
+    column-gap: 20px;
+    width: 90%;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding-bottom: 50px;
+}
+
+/* This is the styling for every box in the grid */
+.grid .grid-box {
+    width: 100%;
+    border: 2px dashed white;
+    text-align: center;
+}
+
+/* The styling for the box headers */
+.grid .grid-box .box-head {
+    font-size: 30px;
+    border: 1px solid white;
+    background-color: #1A1A1D;
+    border-radius: 6px;
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+    position: relative;
+    bottom: 25px;
+}
+
+.grid .grid-box .box-text {
+    padding: 0px 10px;
 }
