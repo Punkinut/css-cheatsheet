@@ -1,3 +1,11 @@
 :root {
     
 }
+
+/* Sets the basic attributes for the main header */
+.title-head {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+}
