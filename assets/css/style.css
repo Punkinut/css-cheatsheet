@@ -16,6 +16,7 @@
 body {
     background-color: var(--dark);
     color: rgb(250, 250, 250);
+    cursor: default;
 }
 
 /* Sets the basic attributes for the main header */
@@ -58,12 +59,18 @@ body {
     width: 100%;
     border: 2px dashed var(--white);
     text-align: left;
+    transition: all 100ms ease-in-out 50ms;
+}
+
+/* Displays a box shadow when hovering */
+.grid .grid-box:hover {
+    box-shadow: 6px 6px 6px var(--red);
 }
 
 /* The styling for the box headers */
 .grid .grid-box .box-head {
     font-size: 30px;
-    border: 1px solid var(--white);
+    border: 2px solid var(--white);
     background-color: var(--dark);
     border-radius: 6px;
     width: 90%;
@@ -79,7 +86,8 @@ body {
     padding: 0px 20px;
     line-height: var(--paraLine);
     color: var(--red);
-    font-size: 15px;
+    font-size: 17px;
+    font-family: var(--font);
 }
 
 .grid .grid-box .code {
@@ -96,4 +104,12 @@ body {
     font-family: var(--codeFont);
     font-size: 12px;
     padding: 12px;
+}
+
+footer {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    font-family: var(--font);
+    padding-bottom: 50px;
 }
