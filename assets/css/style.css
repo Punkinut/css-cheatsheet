@@ -1,13 +1,15 @@
 /* Below is a list of variables I use through out */
 :root {
     --font: futura-pt, sans-serif;
+    --codeFont: 'Source Code Pro', monospace;
     --heavy: 700;
     --book: 400;
     --heading: 45px;
     --para: 18px;
     --paraLine: 1.4em;
     --dark: #1A1A1D;
-    --red: #950740;
+    --red: #C3073F;
+    --white: #fafafa;
 }
 
 /* Sets the basic properties for the body */
@@ -54,23 +56,44 @@ body {
 /* This is the styling for every box in the grid */
 .grid .grid-box {
     width: 100%;
-    border: 2px dashed white;
-    text-align: center;
+    border: 2px dashed var(--white);
+    text-align: left;
 }
 
 /* The styling for the box headers */
 .grid .grid-box .box-head {
     font-size: 30px;
-    border: 1px solid white;
-    background-color: #1A1A1D;
+    border: 1px solid var(--white);
+    background-color: var(--dark);
     border-radius: 6px;
     width: 90%;
     margin: auto;
     padding: 2%;
     position: relative;
     bottom: 25px;
+    color: var(--red);
 }
 
+/* This is the styling for the paragraph elements inside each box */
 .grid .grid-box .box-text {
-    padding: 0px 10px;
+    padding: 0px 20px;
+    line-height: var(--paraLine);
+    color: var(--red);
+    font-size: 15px;
+}
+
+.grid .grid-box .code {
+    border: 2px solid var(--white);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: white;
+    user-select: all;
+    background-image: linear-gradient(
+        var(--dark),
+        var(--red)
+        );
+    font-family: var(--codeFont);
+    font-size: 12px;
+    padding: 12px;
 }
