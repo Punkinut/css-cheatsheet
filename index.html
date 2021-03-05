@@ -30,7 +30,11 @@
                 <aside class="box-text">
                     <p>Use these three properties to create a Flexbox row layout.</p>
                     <div class="code">
-                        <pre></pre>
+                        <p>.row {</p>
+                        <p>&nbsp;&nbsp;display: flex;</p>
+                        <p>&nbsp;&nbsp;flex-direction: row;</p>
+                        <p>&nbsp;&nbsp;flex-wrap: wrap;</p>
+                        <p>}</p>
                     </div>
                 </aside>
             </article>
@@ -43,7 +47,10 @@
                 <aside class="box-text">
                     <p>Use this to create a Flexbox column layout.</p>
                     <div class="code">
-                        <pre></pre>
+                        <p>.column {</p>
+                        <p>&nbsp;&nbsp;display: flex;</p>
+                        <p>&nbsp;&nbsp;flex-direction: column;</p>
+                        <p>}</p>
                     </div>
                 </aside>
             </article>
@@ -56,7 +63,12 @@
                 <aside class="box-text">
                     <p>Build a 12-column layout using CSS Grid</p>
                     <div class="code">
-                        <pre></pre>
+                        <p>.grid {</p>
+                        <p>&nbsp;&nbsp;display: grid;</p>
+                        <p>&nbsp;&nbsp;width: 100%;</p>
+                        <p>&nbsp;&nbsp;grid-template-columns:</p>
+                        <p>repeat(12, 1fr);</p>
+                        <p>}</p>                     
                     </div>
                 </aside>
             </article>
@@ -69,7 +81,12 @@
                 <aside class="box-text">
                     <p>This will create a background linear gradient from top to bottom.</p>
                     <div class="code">
-                        <pre></pre>
+                        <p>.linear-gradient-background {</p>
+                        <p>&nbsp;&nbsp;background-image: linear-gradient (</p>
+                        <p>&nbsp;&nbsp;rgba(232, 102, 236, 0.3) 0%,</p>
+                        <p>&nbsp;&nbsp;rgba(232, 102, 236, 0.6) 100%</p>
+                        <p>&nbsp;);</p>
+                        <p>}</p>
                     </div>
                 </aside>
             </article>
@@ -82,7 +99,15 @@
                 <aside class="box-text">
                     <p>Use transition and box shadows to glow on hover.</p>
                     <div class="code">
-                        <pre></pre>
+                        <p>.code-card .card-header {</p>
+                        <p>&nbsp;&nbsp;border-radius: 8px;</p>
+                        <p>&nbsp;&nbsp;transition: all 0.5s ease-in-out;</p>
+                        <p>}</p>
+                        <p>.code-card:hover ,</p>
+                        <p>.code-card:hover .card-header {</p>
+                        <p>&nbsp;&nbsp;box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);</p>
+                        <p>&nbsp;&nbsp;transition: all 0.5s ease-in-out;</p>
+                        <p>}</p>
                     </div>
                 </aside>
             </article>
@@ -95,17 +120,17 @@
                 <aside class="box-text">
                     <p>Use position properties and negative margins to raise elements higher than their natural string point.</p>
                     <div class="code">
-                        <pre></pre>
+                        <p>.card-header {</p>
+                        <p>&nbsp;&nbsp;position: relative;</p>
+                        <p>&nbsp;&nbsp;margin-top: -20px;</p>
+                        <p>}</p>
                     </div>
                 </aside>
             </article>
-
         </section>
-
     </main>
     <footer>
         <h1>Made with ❤️ and CSS</h1>
     </footer>
-    
 </body>
 </html>

@@ -47,7 +47,7 @@ body {
     row-gap: 50px;
     column-gap: 20px;
     width: 90%;
-    min-height: 600px;
+    min-height: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
@@ -59,7 +59,8 @@ body {
     width: 100%;
     border: 2px dashed var(--white);
     text-align: left;
-    transition: all 100ms ease-in-out 50ms;
+    position: relative;
+    transition: all 100ms ease-in-out;
 }
 
 /* Displays a box shadow when hovering */
@@ -88,28 +89,73 @@ body {
     color: var(--red);
     font-size: 17px;
     font-family: var(--font);
+    overflow: auto;
+    position: relative;
 }
 
+/* The styling of the coding box */
 .grid .grid-box .code {
-    border: 2px solid var(--white);
     margin-top: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
-    color: white;
+    color: var(--dark);
     user-select: all;
     background-image: linear-gradient(
-        var(--dark),
-        var(--red)
+        rgb(236, 236, 236),
+        var(--white) 120%
         );
     font-family: var(--codeFont);
     font-size: 12px;
-    padding: 12px;
+    padding: 30px 12px;
 }
 
+/* Highlights all the text */
+.grid .grid-box .code p::selection {
+    background-color: var(--red);
+}
+
+/* This is the basic styling of the footer */
 footer {
     width: 85%;
     margin: auto;
     text-align: center;
     font-family: var(--font);
     padding-bottom: 50px;
+}
+
+/* Below are media queries */
+
+@media screen and (max-width: 1200px) {
+    .grid .grid-box .box-head {
+        font-size: 2.4vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .grid {
+        grid-template: 0.5fr 0.5fr 1fr / repeat(2, 1fr);
+        min-height: 1000px;
+    } 
+
+    .grid .grid-box .box-head {
+        font-size: 3vw;
+    }
+}
+    
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template: repeat(6, 0.5fr) / 1fr;
+        min-height: 2200px;
+    } 
+
+    .grid .grid-box .box-head {
+        font-size: 4vw;
+    }
+
+    @media screen and (max-width: 375px) {
+        .grid .grid-box .box-head {
+            font-size: 6vw;
+        }
+
+    }
 }
